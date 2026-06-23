@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom'
 import { ArrowRight, CalendarCheck, Clock, Star, ShoppingBag } from 'lucide-react'
 import logo from '../assets/logo.jpg'
+import imgAlitas from '../assets/images/_MG_0062.jpg.jpeg'
+import imgBurger from '../assets/images/_MG_0073.jpg.jpeg'
+import imgTaco from '../assets/images/20220113_184337.jpg.jpeg'
+import imgGauchito from '../assets/images/20230906_234552.jpg.jpeg'
+import imgHamburguesas from '../assets/images/_MG_0073.jpg.jpeg'
+import imgMakis from '../assets/images/_MG_0045.jpg.jpeg'
+import imgCombos from '../assets/images/VID_60611013_080456_523(1).jpg.jpeg'
 
 const RESERVA_WHATSAPP =
   'https://wa.me/51943358398?text=Hola,%20quiero%20reservar%20una%20mesa'
@@ -10,25 +17,25 @@ const highlights = [
     label: 'Alitas BBQ',
     price: 'S/ 22',
     cat: 'ALITAS',
-    img: '/src/assets/images/_MG_0062.jpg.jpeg'
+    img: imgAlitas
   },
   {
     label: 'La Fonda Burger',
     price: 'S/ 28',
     cat: 'BURGERS',
-    img: '/src/assets/images/_MG_4431.jpg.jpeg'
+    img: imgBurger
   },
   {
     label: 'Taco de Pollo',
     price: 'S/ 20',
     cat: 'TACOS',
-    img: '/src/assets/images/20220113_184341.jpg.jpeg'
+    img: imgTaco
   },
   {
   label: 'Gauchito',
   price: 'S/ 25',
   cat: 'MAKIS',
-  img: '/src/assets/images/gaucho 3.jpg.jpeg'
+  img: imgGauchito
 },
 ]
 
@@ -36,22 +43,22 @@ const features = [
   {
     title: 'Hamburguesas artesanales',
     desc: 'Pan suave, carne seleccionada y combinaciones de la casa.',
-    img: '/src/assets/images/_MG_4419.JPG.jpeg'
+    img: imgHamburguesas
   },
   {
   title: 'Alitas con salsas de la casa',
   desc: 'BBQ, acevichada, salteadas, chimichurri y más sabores.',
-  img: '/src/assets/images/_MG_0062.jpg.jpeg'
+  img: imgAlitas
 },
   {
     title: 'Makis fusión',
     desc: 'Sabores Genzai preparados con ingredientes frescos.',
-    img: '/src/assets/images/_MG_9999.jpg.jpeg'
+    img: imgMakis
   },
   {
   title: 'Combos para compartir',
   desc: 'Opciones familiares para disfrutar en grupo.',
-  img: '/src/assets/images/20230301_230353.jpg.jpeg'
+  img: imgCombos
 },
 ]
 
@@ -179,7 +186,7 @@ export default function Landing() {
             }}
           >
             <img
-              src="/src/assets/images/_MG_4431.jpg.jpeg"
+              src={imgBurger}
               alt="La Fonda Burger"
               style={{
                 width: '100%',

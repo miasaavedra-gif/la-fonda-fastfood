@@ -12,7 +12,21 @@ const normalizar = (txt = '') =>
     .replace(/[\u0300-\u036f]/g, '')
     .trim()
 
-const imgLocal = (file) => `/src/assets/images/${file}`
+// Carga todas las imágenes de la carpeta en build-time (Vite las procesa e incluye en el deploy)
+const imagenesDisponibles = import.meta.glob('../assets/images/*', {
+  eager: true,
+  query: '?url',
+  import: 'default'
+})
+
+// Normaliza las claves del glob (quita el path) para poder buscarlas por nombre de archivo
+const mapaImagenes = {}
+for (const path in imagenesDisponibles) {
+  const nombreArchivo = path.split('/').pop()
+  mapaImagenes[nombreArchivo] = imagenesDisponibles[path]
+}
+
+const imgLocal = (file) => mapaImagenes[file] || logo
 
 const IMAGENES = {
   // ALITAS

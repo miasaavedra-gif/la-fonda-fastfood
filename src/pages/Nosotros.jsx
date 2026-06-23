@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Award, ChefHat, Store, MapPin, ArrowRight, CalendarCheck } from 'lucide-react'
+import imgNosotros from '../assets/images/_MG_9938.jpg.jpeg'
 
 const RESERVA_WHATSAPP =
   'https://wa.me/51943358398?text=Hola,%20quiero%20reservar%20una%20mesa'
@@ -91,7 +92,7 @@ export default function Nosotros() {
             }}
           >
             <img
-              src="/src/assets/images/20230809_214023.jpg.jpeg"
+              src={imgNosotros}
               alt="Especialidades La Fonda"
               style={{
                 width: '100%',
